@@ -1,0 +1,26 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "categoria": 4,
+    "producto": 2
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "categoria": {
+      "1": "{\"nombre\":\"Inicial\",\"raiz\":true,\"id\":1}",
+      "2": "{\"nombre\":\"Secundaria\",\"categoriaId\":1,\"id\":2}",
+      "3": "{\"nombre\":\"Terciaria\",\"categoriaId\":2,\"id\":3}"
+    },
+    "producto": {
+      "1": "{\"nombre\":\"Curso de 4 a 7\",\"descripcion\":\"Alto curso\",\"categoriaId\":3,\"id\":1}"
+    }
+  }
+}

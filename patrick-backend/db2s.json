@@ -1,0 +1,48 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "categoria": 15,
+    "producto": 10,
+    "novedad": 4
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "categoria": {
+      "1": "{\"nombre\":\"Cursos\",\"raiz\":true,\"id\":1}",
+      "2": "{\"nombre\":\"Servicios\",\"raiz\":true,\"id\":2}",
+      "3": "{\"nombre\":\"Anuales\",\"categoriaId\":1,\"id\":3}",
+      "4": "{\"nombre\":\"Regulares\",\"categoriaId\":3,\"id\":4}",
+      "5": "{\"nombre\":\"Clases personalizadas\",\"categoriaId\":3,\"id\":5}",
+      "6": "{\"nombre\":\"Business classes\",\"categoriaId\":3,\"id\":6}",
+      "7": "{\"nombre\":\"Talleres iniciales (de 4 a 7 años)\",\"id\":7,\"categoriaId\":4,\"descripcion\":\"<p><strong style=\\\"color: rgb(9, 72, 110);\\\">Saint Patrick </strong><span style=\\\"color: rgb(9, 72, 110);\\\">ofrece cursos especiales para aquellos niños que deseen iniciar su </span><strong style=\\\"color: rgb(9, 72, 110);\\\">aprendizaje del inglés en edad temprana.</strong></p><p><span style=\\\"color: rgb(9, 72, 110);\\\">En estos cursos solo se desarrolla el habla y la comprensión auditiva (para no interferir en el aprendizaje de la lecto-escritura en español) a través de juegos, canciones, cuentos, dramatizaciones, arte, etc.</span></p><p><span style=\\\"color: rgb(9, 72, 110);\\\">En estos niveles el progreso de los alumnos se miden en forma continua y no mediante instancias de evaluaciones formales.</span></p>\"}",
+      "8": "{\"nombre\":\"Cursos Para Niños (de 8 a 11 años.)\",\"categoriaId\":4,\"id\":8,\"descripcion\":\"<p><span style=\\\"color: rgba(35, 20, 86, 0.57);\\\">Las clases se dictan en grupos cuyo número permite un seguimiento personalizado del trabajo de cada alumno durante el año.</span></p><p><span style=\\\"color: rgba(35, 20, 86, 0.57);\\\">En las clases, </span><strong style=\\\"color: rgba(35, 20, 86, 0.57);\\\">que son íntegramente en inglés,</strong><span style=\\\"color: rgba(35, 20, 86, 0.57);\\\"> se recurre a dramatizaciones, juegos, cuentos, poemas y canciones para desarrollar las cuatro habilidades del lenguaje -habla, lectura, escritura y comprensión auditiva- haciendo hincapié en la comunicación significativa.</span></p><p><span style=\\\"color: rgba(35, 20, 86, 0.57);\\\">El progreso del alumno es </span><em style=\\\"color: rgba(35, 20, 86, 0.57);\\\">evaluado continuamente</em><span style=\\\"color: rgba(35, 20, 86, 0.57);\\\"> durante las clases y a través de un examen integrador a mediado y a fin de año. Los alumnos reciben bimestralmente libretas de calificaciones e informes periódicos que informan a los padres acerca de los avances del aprendizaje.</span></p>\"}",
+      "9": "{\"nombre\":\"Cursos para adolescentes\",\"categoriaId\":4,\"id\":9}",
+      "11": "{\"nombre\":\"Exámenes internacionales\",\"categoriaId\":2,\"id\":11}",
+      "12": "{\"nombre\":\"Universidad de Cambridge\",\"categoriaId\":11,\"id\":12}",
+      "14": "{\"nombre\":\"Walter Alonso\",\"descripcion\":\"<p>asdasdada</p>\",\"categoriaId\":9,\"foto\":\"http://localhost:3005/api/containers/images/download/21976_1286939463210_3088538_n.jpg\",\"id\":14}"
+    },
+    "producto": {
+      "1": "{\"nombre\":\"Kinder I\",\"descripcion\":\"<p><strong>Viernes de 18 a 19:30 hs.</strong></p><p>Para alumnos que no hayan cursado previamente en el instituto.</p><p>Libro: <em>New English Adventure \\\"A\\\"</em></p>\",\"id\":1,\"categoriaId\":7,\"precio\":\"2000\"}",
+      "2": "{\"nombre\":\"Kinder II\",\"descripcion\":\"<p><strong>Viernes de 18 a 19:30 hs.</strong></p><p>Para alumnos que hayan cursado previamente en el instituto.</p><p>Libro: <em>New English Adventure \\\"B\\\"</em></p>\",\"categoriaId\":7,\"id\":2,\"precio\":\"1500\"}",
+      "3": "{\"nombre\":\"Preparatorio I\",\"descripcion\":\"<p><strong>Viernes de 18 a 19:30 hs.</strong></p><p>Libro: <em>Pebbles 1</em></p>\",\"categoriaId\":7,\"id\":3,\"precio\":\"1000\"}",
+      "4": "{\"nombre\":\"1st Kids\",\"descripcion\":\"<p>Lunes y Miercoles 10 a 11:30 hs.</p><p>Martes y Jueves 14:30 a 16 hs.</p><p>Libro:Bright Sparks 1 (McMillan)</p>\",\"categoriaId\":8,\"id\":4,\"precio\":\"750\"}",
+      "5": "{\"nombre\":\"2nd Kids\",\"descripcion\":\"Lunes y Miercoles 16 a 17:30 hs. Martes y Jueves 18 a 19:30 hs. Libro:Kids 1 (Units 10 to 14)\",\"categoriaId\":8,\"id\":5,\"precio\":\"3000\"}",
+      "6": "{\"nombre\":\"3rd Kids\",\"descripcion\":\"Lunes y Miercoles 18 a 19:30 hs. Martes y Jueves 16 a 17:30 hs. Libro: Whizz Kids 2\",\"categoriaId\":8,\"id\":6,\"precio\":\"2450.22\"}",
+      "7": "{\"nombre\":\"1st year Adolescents Junior\",\"descripcion\":\"Martes y Jueves 14:30 a 16 hs. Alumnos de 6º año EGB que empiezan desde el principio.  Libro:English in mind starter 9 (Units 1-8)\",\"categoriaId\":4,\"id\":7,\"precio\":\"2200\"}",
+      "8": "{\"nombre\":\"Young Learners\",\"descripcion\":\"Curso\",\"categoriaId\":12,\"id\":8,\"precio\":\"2150\"}",
+      "9": "{\"nombre\":\"Kinder\",\"descripcion\":\"Kinder\",\"categoriaId\":8,\"id\":9,\"precio\":\"855\"}"
+    },
+    "novedad": {
+      "2": "{\"titulo\":\"Murio el\",\"descripcion\":\"<p><strong>Hola!!!!</strong></p>\",\"fecha\":\"2020-07-07T20:34:36.307Z\",\"foto\":\"http://localhost:3005/api/containers/images/download/21976_1286939463210_3088538_n.jpg\",\"id\":2}",
+      "3": "{\"titulo\":\"Inglés obligatorio\",\"descripcion\":\"<p>Se estudiará en todos los colegios.</p>\",\"fecha\":\"2020-07-08T02:03:17.046Z\",\"foto\":\"http://localhost:3005/api/containers/images/download/8a11.jpg\",\"id\":3}"
+    }
+  }
+}
