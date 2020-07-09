@@ -1,0 +1,38 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "categoria": 13,
+    "producto": 7,
+    "novedad": 2
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "categoria": {
+      "1": "{\"nombre\":\"Cursos\",\"raiz\":true,\"id\":1}",
+      "2": "{\"nombre\":\"Anuales\",\"descripcion\":\"<p><span style=\\\"color: rgb(35, 20, 86);\\\">El Instituto cuenta con computadoras en todos los salones de clase para ser usados y aprovechados durante la clase y también los alumnos pueden seguir usando el material en sus casas.</span></p><p><span style=\\\"color: rgb(35, 20, 86);\\\">El uso de pantallas interactivas permite a los alumnos interactuar con el idioma. Todos los cursos cuentan con clases interactivas combinando la enseñanza tradicional con el uso de todas las herramientas que nos brindan las nuevas tecnologías.</span></p>\",\"categoriaId\":1,\"id\":2}",
+      "6": "{\"nombre\":\"Talleres iniciales (de 4 a 7 años)\",\"categoriaId\":12,\"foto\":\"http://localhost:3005/api/containers/images/download/4a7.jpg\",\"id\":6}",
+      "7": "{\"nombre\":\"Cursos Para Niños (de 8 a 11 años.)\",\"descripcion\":\"<p><span style=\\\"color: rgb(9, 72, 110);\\\">Las clases se dictan en grupos cuyo número permite un seguimiento personalizado del trabajo de cada alumno durante el año.</span></p><p><span style=\\\"color: rgb(9, 72, 110);\\\">En las clases, que son íntegramente en inglés, se recurre a dramatizaciones, juegos, cuentos, poemas y canciones para desarrollar las cuatro habilidades del lenguaje -habla, lectura, escritura y comprensión auditiva- haciendo hincapié en la comunicación significativa.</span></p><p><span style=\\\"color: rgb(9, 72, 110);\\\">El progreso del alumno es evaluado continuamente durante las clases y a través de un examen integrador a mediado y a fin de año. Los alumnos reciben bimestralmente libretas de calificaciones e informes periódicos que informan a los padres acerca de los avances del aprendizaje.</span></p>\",\"categoriaId\":3,\"foto\":\"http://localhost:3005/api/containers/images/download/kids-learning.jpg\",\"id\":7}",
+      "8": "{\"nombre\":\"De verano\",\"categoriaId\":1,\"id\":8}",
+      "10": "{\"nombre\":\"Clases personalizadas\",\"categoriaId\":2,\"foto\":\"http://localhost:3005/api/containers/images/download/2017-04-13-Peer-Teaching-with-Two-Elementary-Students-condensed-1.jpg\",\"id\":10}",
+      "12": "{\"nombre\":\"Regulares\",\"categoriaId\":2,\"foto\":\"http://localhost:3005/api/containers/images/download/CursoRegular.jpg\",\"id\":12}"
+    },
+    "producto": {
+      "1": "{\"nombre\":\"Kinder I\",\"descripcion\":\"<p><strong style=\\\"color: rgb(35, 20, 86);\\\">Viernes de 18 a 19:30 hs.</strong></p><p><span style=\\\"color: rgb(35, 20, 86);\\\">Para alumnos que no hayan cursado previamente en el instituto.</span></p><p><span style=\\\"color: rgb(35, 20, 86);\\\">Libro: New English Adventure \\\"A\\\"</span></p>\",\"categoriaId\":6,\"id\":1,\"precio\":\"0\"}",
+      "2": "{\"nombre\":\"Kinder II\",\"descripcion\":\"<p><strong style=\\\"color: rgb(35, 20, 86);\\\">Viernes de 18 a 19:30 hs.</strong></p><p><span style=\\\"color: rgb(35, 20, 86);\\\">Para alumnos que hayan cursado previamente en el instituto.</span></p><p><span style=\\\"color: rgb(35, 20, 86);\\\">Libro: New English Adventure \\\"B\\\"</span></p>\",\"categoriaId\":6,\"id\":2,\"precio\":\"0\"}",
+      "3": "{\"nombre\":\"1st Kids\",\"descripcion\":\"<p><strong style=\\\"color: rgb(35, 20, 86);\\\">Lunes y Miercoles 10 a 11:30 hs.</strong></p><p><strong style=\\\"color: rgb(35, 20, 86);\\\">Martes y Jueves 14:30 a 16 hs.</strong></p><p><span style=\\\"color: rgb(35, 20, 86);\\\">Libro:Bright Sparks 1 (McMillan)</span></p>\",\"precio\":\"0\",\"categoriaId\":7,\"id\":3}",
+      "5": "{\"nombre\":\"2nd Kids\",\"descripcion\":\"<p><strong style=\\\"color: rgb(35, 20, 86);\\\">Lunes y Miercoles 16 a 17:30 hs.</strong></p><p><strong style=\\\"color: rgb(35, 20, 86);\\\">Martes y Jueves 18 a 19:30 hs.</strong></p><p><span style=\\\"color: rgb(35, 20, 86);\\\">Libro:Kids 1 (Units 10 to 14)</span></p>\",\"precio\":\"0\",\"categoriaId\":7,\"id\":5}",
+      "6": "{\"nombre\":\"3rd Kids\",\"descripcion\":\"<p><strong style=\\\"color: rgb(35, 20, 86);\\\">Lunes y Miercoles 18 a 19:30 hs.</strong></p><p><strong style=\\\"color: rgb(35, 20, 86);\\\">Martes y Jueves 16 a 17:30 hs.</strong></p><p><span style=\\\"color: rgb(35, 20, 86);\\\">Libro: Whizz Kids 2</span></p>\",\"precio\":\"0\",\"categoriaId\":7,\"id\":6}"
+    },
+    "novedad": {
+      "1": "{\"titulo\":\"Nueva novedad\",\"descripcion\":\"<p>asjkdhajksd asjkdklas asdkljaskldlas a<strong><em><u>sñldkañdklñasdas</u></em></strong></p>\",\"fecha\":\"2020-07-08T19:53:47.809Z\",\"foto\":\"http://localhost:3005/api/containers/images/download/5a831597198f0.image.jpg\",\"id\":1}"
+    }
+  }
+}
