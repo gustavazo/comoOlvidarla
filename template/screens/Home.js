@@ -1,9 +1,10 @@
 import ProductCard from '../components/ProductCard';
+import GoogleMapReact from 'google-map-react';
 
 const SectionCategoria = (props) => {
-
+  
   return (
-    <div id="servicios" className="section-9">
+    <div id={props.categoria.nombre.toLowerCase()} className="section-9">
       <div className="tituloseccion">
         <h2 className="heading-8">{props.categoria.nombre}</h2>
       </div>
@@ -11,11 +12,11 @@ const SectionCategoria = (props) => {
       {props.categoria.categorias.map(categoria2 => (
         <div>
           <div className="text-block-8">{categoria2.nombre}</div>
-          <p className="paragraph-3 centrado">Cada día adquiere más importancia el conocimiento de idiomas en el ámbito profesional como herramienta de trabajo. Es importante una formación a la medida de las necesidades concretas de cada empresa y que se adecue a su horario laboral.</p>
+          <div className="paragraph-3 centrado" dangerouslySetInnerHTML={{__html: categoria2.descripcion}} /> 
           <div className="wrapitems">
 
             {categoria2.categorias.map(categoria3 => (
-              <ProductCard categoria={categoria3}/>
+              <ProductCard categoria={categoria3} cat2={categoria2.nombre} cat1={props.categoria.nombre}/>
             ))}
 
           </div>
@@ -26,7 +27,7 @@ const SectionCategoria = (props) => {
 };
 
 const Novedad = (props) => {
-  console.log(props.novedad);
+  
   let fechaTotal = new Date(props.novedad.fecha);
 
   
@@ -46,8 +47,7 @@ const Novedad = (props) => {
 
 
 export default (props) => {
-  console.log('props', props);
-
+  
 
   React.useEffect(() => {
     const categoriasString = JSON.stringify(props.categorias);
@@ -57,9 +57,13 @@ export default (props) => {
     if (!localStorage.getItem('carro')) {
       localStorage.setItem('carro', '[]');
     }
-    
+
   }, [])
 
+  const handleShow = () => {
+    document.getElementById('forro').style = 'max-height: 280px'; 
+    document.getElementById('botonVerMas').style = 'display: none';    
+  }
 
   return (
     <div>
@@ -144,8 +148,9 @@ export default (props) => {
                 <div className="w-slider-mask">
                   <div className="w-slide">
                     <div className="div-block-47">
-                      <h3 className="heading-7">Saint Patrick ofrece cursos especialmente diseñados para niños, adolescentes y adultos en una amplia variedad de horarios y niveles.</h3>
                       <h2 className="heading-6">Cursos regulares para niños,<br />adolescentes y adultos.</h2>
+                      <h3 className="heading-7">Saint Patrick ofrece cursos especialmente diseñados para niños, adolescentes y adultos en una amplia variedad de horarios y niveles.</h3>
+                      
                     </div>
                   </div>
                   <div className="w-slide">
@@ -247,18 +252,15 @@ export default (props) => {
               <p className="parra1">Desde el año 2000 la institución ha brindado capacitación en<strong> inglés comercial</strong> y <strong>servicio de Traducción</strong> en eventos a la Asociación de Comercio e Industria de la localidad, como también a empresas privadas, organizaciones y empresas públicas de la localidad. Nuestras sedes brindan a nuestros alumnos todo lo necesario para hacer las clases más motivadoras y efectivas: ambientes climatizados, cómodamente amueblados, equipados con sistema de audio y con las últimas tecnologías en pantallas interactivas &nbsp;y una extensa biblioteca a disposición de nuestros alumnos.</p>
             </div>
           </div>
-          <div data-w-id="dd619126-9a55-2987-29b4-57f64c32a728" style={{ height: '0PX' }} className="columns-13 w-row">
+          <div data-w-id="dd619126-9a55-2987-29b4-57f64c32a728" id="forro" className="columns-13 w-row toShow">
             <div className="w-col w-col-6">
               <p className="parra1">La capacitación y actualización permanente de las docentes, lleva a brindar una calidad educativa que permite a nuestros alumnos alcanzar un destacado nivel en el manejo oral y escrito del idioma inglés, satisfaciendo de esta manera las expectativas de alumnos y padres. A nivel provincial el Ministerio de Educación de la provincia de Santa Fe a través de su departamento de Formación Profesional avala los certificados de nuestros alumnos según disposición 1/2015.</p>
             </div>
             <div className="w-col w-col-6">
               <p className="parra1">A nivel Nacional la <strong>UNIVERSIDAD TECNOLOGICA NACIONAL</strong> nos brinda la certificación de nuestros cursos y su aval para evaluar a los alumnos de toda la provincia de Santa Fe. <strong>Saint Patrick es OPEN VENUE</strong> de los exámenes internacionales de &nbsp;la <strong>Universidad de Cambridge</strong> por lo que nuestros alumnos rinden en nuestras instalaciones para obtener certificacion internacionalmente reconocida de su nivel de inglés.<br />A partir del año 2008 se incorpora &nbsp;<strong>DEPARTAMENTO DE VIAJES EDUCATIVOS</strong>&nbsp;llamado&nbsp;<strong>TRAVEL AND LEARN,</strong>&nbsp;para conocer nuevos lugares y aprender Inglés en la cuna del idioma. Nuestro Departamento de Capacitación docente ISP brinda cursos de actualización &nbsp;continua presenciales y <strong>online </strong>a toda la provincia.</p>
             </div>
-          </div><a data-w-id="8b631f53-bc80-4ed7-53bf-a9e6348ccd5a" href="#" className="button-6 w-button">Ver más</a></div>
+          </div><div id="botonVerMas" data-w-id="8b631f53-bc80-4ed7-53bf-a9e6348ccd5a" className="button-6 w-button verMas" onClick={handleShow}>Ver más</div></div>
       </div>
-
-
-
 
       {props.categorias.map(categoria => (
         <SectionCategoria categoria={categoria} />
@@ -308,7 +310,7 @@ export default (props) => {
         </div>
       </div>
       <div id="mapa" className="section-5">
-        <div className="html-embed w-embed w-iframe"><iframe src="/https://www.google.com/maps/d/u/0/embed?mid=1JyCXY3PMm4CUCuRSLtpCadM6GGAUsfbF" width="100%" height={400} /></div>
+        <div className="html-embed w-embed w-iframe"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1JyCXY3PMm4CUCuRSLtpCadM6GGAUsfbF" width="100%" height={400} /></div>
       </div>
     </div>
   );

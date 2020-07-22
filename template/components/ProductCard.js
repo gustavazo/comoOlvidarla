@@ -2,11 +2,12 @@ import Link from 'next/link';
 
 export default (props) => {
 
-    console.log("props=", props);
+
+    const categoriaHilo = `${props.cat1} > ${props.cat2} >`
 
     return (
-        <Link href={`/cursos?categoriaId=${props.categoria.id}`} target="_blank">
-            <div className="linkcurso w-inline-block">
+        <Link href={`/cursos?categoriaId=${props.categoria.id}&categoriaStr=${categoriaHilo}`} target="_blank">
+            <div className="linkcurso w-inline-block" title="Click para más información">
                 <div className="contcurso"><img src={props.categoria.foto} alt="" className="image-10" />
                     <div className="namecurso">
                         <div className="txtcurso">{props.categoria.nombre}</div>

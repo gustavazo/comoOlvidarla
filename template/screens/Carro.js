@@ -49,16 +49,11 @@ export default () => {
     }
     
     React.useEffect(() => {
-        
-
         // traemos el carro guardado, va a estar en modo string
         const carroString = localStorage.getItem('carro');
 
         // lo parseamos (se transfrorma en un tipo de dato real) y setemos la variable global carro
         setCarro(JSON.parse(carroString));
- 
-        console.log('*******', carro);
-
     }, [])
     
     return (

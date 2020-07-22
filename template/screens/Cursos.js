@@ -111,6 +111,7 @@ export default (props) => {
     const [categoriaSeleccionada, setCategoriaSeleccionada] = React.useState({
         categorias: []
     });
+    const [ categoriasPadres, setCategoriasPadres ] = React.useState('')
 
     console.log('CATEGORIA SELECCIONADA', categoriaSeleccionada);
 
@@ -122,6 +123,9 @@ export default (props) => {
         const urlParams = new URLSearchParams(urlParamsString);
 
         const categoriaId = urlParams.get('categoriaId');
+        setCategoriasPadres(urlParams.get('categoriaStr'));
+
+        console.log('categorias', categoriasPadres);
         
         const categoriasJSON = JSON.parse(categoriasString);
 
@@ -145,8 +149,8 @@ export default (props) => {
     return (
         <div className="section-10 w-clearfix">
             <div className="div-block-40">
-                <h1 className="h1rubro">{} | </h1>
-                <h2 className="h2subrubro"> Regulares</h2>
+                <h1 className="h1rubro"></h1>
+                <h2 className="h2subrubro">{categoriasPadres} Regulares</h2>
             </div>
 
             <StickyMenu categorias={categorias} />

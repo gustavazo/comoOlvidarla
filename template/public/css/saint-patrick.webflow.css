@@ -1,3 +1,13 @@
+.navBar {
+  z-index: 9999;
+  background-color: violet;
+  position: fixed;
+  
+}
+.menuResponsive {
+  background-color:white;
+}
+
 .div-block {
   position: fixed;
   left: 0%;
@@ -21,6 +31,10 @@
   -ms-flex-align: end;
   align-items: flex-end;
   background-color: #231456;
+}
+
+.mostrar {
+  display: none;
 }
 
 .image {
@@ -975,7 +989,9 @@
 }
 
 .section-7 {
-  padding: 0px 0% 50px;
+ padding-top: 55px;
+ margin-top: -55px;
+ padding-bottom: 75px;
 }
 
 .novedad {
@@ -1241,7 +1257,10 @@
 }
 
 .section-9 {
-  padding: 0px 0% 50px;
+  padding-top: 55px;
+  margin-top: -55px;
+  
+  padding-bottom: 75px;
   background-color: #fff;
 }
 
@@ -1906,6 +1925,13 @@
   background-color: #fff;
 }
 
+.toShow {
+  max-height: 0px;
+  -webkit-transition: max-height 0.8s;
+	-moz-transition: max-height 0.8s;
+	transition: max-height 0.8s;
+}
+
 .button-6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1923,6 +1949,7 @@
   background-color: #9b2019;
   font-family: Montserrat, sans-serif;
   font-weight: 200;
+  margin-bottom: 25px
 }
 
 .columns-12 {
@@ -1936,6 +1963,8 @@
 }
 
 .section-11 {
+  padding-top: 55px;
+  margin-top: -55px;
   padding-bottom: 26px;
 }
 
@@ -2196,6 +2225,7 @@
 }
 
 .containercarro {
+  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2376,6 +2406,7 @@
 }
 
 .contuser {
+  
   max-width: 20%;
 }
 
@@ -2437,6 +2468,8 @@
 }
 
 @media screen and (max-width: 991px) {
+  
+    
   .section {
     padding-right: 2%;
     padding-left: 2%;
@@ -2550,8 +2583,10 @@
     flex-wrap: wrap;
   }
   .section-9 {
+    
     padding-right: 0%;
     padding-left: 0%;
+
   }
   .text-block-16 {
     font-size: 21px;
@@ -2620,6 +2655,7 @@
   }
   .nav-menu {
     background-color: #fff;
+    
   }
   .icon-2 {
     color: #09486e;
@@ -2690,6 +2726,11 @@
 }
 
 @media screen and (max-width: 767px) {
+    
+  .menuResponsive {
+    background-color: white;
+  }
+  
   .navbar {
     height: 60px;
     padding-right: 1%;
@@ -2874,7 +2915,24 @@
   .nav-menu {
     background-color: #fff;
   }
-  .menu-button {
+
+
+  .w-nav-buttons {
+    position: relative;
+    float: right;
+    padding: 18px;
+    font-size: 24px;
+    display: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .menu-buttons {
     display: block;
     width: auto;
     height: auto;
@@ -2987,6 +3045,7 @@
     align-self: center;
   }
   .contuser {
+    
     max-width: 27%;
   }
   .div-block-59 {
@@ -3249,6 +3308,7 @@
     margin-right: 6px;
   }
   .div-block-55 {
+    
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
