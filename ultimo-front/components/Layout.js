@@ -16,13 +16,13 @@ const Layout = (props) => (
       <title>{props.title || ''}</title>
       <meta name="description" content={props.description || ''} />
       <meta name="theme-color" content={THEME_COLOR} />
-      <link rel="icon" sizes="192x192" href="/static/images/icons-192.png" />
-      <link rel="stylesheet" href="/static/css/normalize.css" />
-      <link rel="stylesheet" href="/static/css/webflow.css" />
-      <link rel="stylesheet" href="/static/css/saint-patrick.webflow.css" />
+      <link rel="icon" sizes="192x192" href="/images/icons-192.png" />
+      <link rel="stylesheet" href="/css/normalize.css" />
+      <link rel="stylesheet" href="/css/webflow.css" />
+      <link rel="stylesheet" href="/css/saint-patrick.webflow.css" />
 
-      <link rel="apple-touch-icon" href="/static/images/icons-192.png" />
-      <link rel="icon" href="/static/favicon.ico" />
+      <link rel="apple-touch-icon" href="/images/icons-192.png" />
+      <link rel="icon" href="/favicon.ico" />
       <link rel="manifest" href="/manifest.json" />
     </NextHead>
 
@@ -36,7 +36,7 @@ const Layout = (props) => (
     />
 
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5da0657b754316944047c5a6" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="/static/js/webflow.js" type="text/javascript"></script>
+  <script src="/js/webflow.js" type="text/javascript"></script>
   </>
 )
 
