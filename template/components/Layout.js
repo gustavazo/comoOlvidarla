@@ -5,25 +5,35 @@ import Header2 from './Header2';
 import Footer from './Footer';
 
 
-
 export default  ({ children }) => {
-
-    React.useEffect(() => {
-        Webflow.ready()
-    });
 
     return (
         <>
 
             <Head>
-                <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
-                <link href="/css/webflow.css" rel="stylesheet" type="text/css" />
-                <link href="/css/saint-patrick.webflow.css" rel="stylesheet" type="text/css" />
-                {/* [if lt IE 9]><![endif] */}
+            <title>Instituto Saint Patrick | Cursos de Inglés</title>
+                <meta content="Instituto Saint Patrick es una institución especializada en servicios lingüísticos y en cursos de formación en Inglés para la comunidad." name="description" />
+                <meta content="Instituto Saint Patrick | Cursos de Inglés" property="og:title" />
+                <meta content="Instituto Saint Patrick es una institución especializada en servicios lingüísticos y en cursos de formación en Inglés para la comunidad." property="og:description" />
+                <meta content="images/backInicio.jpg" property="og:image" />
+                <meta content="Instituto Saint Patrick | Cursos de Inglés" property="twitter:title" />
+                <meta content="Instituto Saint Patrick es una institución especializada en servicios lingüísticos y en cursos de formación en Inglés para la comunidad." property="twitter:description" />
+                <meta content="images/backInicio.jpg" property="twitter:image" />
+                <meta property="og:type" content="website" />
+                <meta content="summary_large_image" name="twitter:card" />
+                <meta content="width=device-width, initial-scale=1" name="viewport" />
+                <meta content="Webflow" name="generator" />
                 <link href="images/favicon.jpg" rel="shortcut icon" type="image/x-icon" />
                 <link href="images/webclip.png" rel="apple-touch-icon" />
                 <link rel="stylesheet" href="/css/ReactToastify.min.css"></link>
                 {/*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>*/}
+                <link href="css/normalize.css" rel="stylesheet" type="text/css" />
+                <link href="css/webflow.css" rel="stylesheet" type="text/css" />
+                <link href="css/saint-patrick.webflow.css" rel="stylesheet" type="text/css" />
+                {/* [if lt IE 9]><![endif] */}
+                <script src="js/ol.js"></script>  
+                <link href="images/favicon.jpg" rel="shortcut icon" type="image/x-icon" />
+                <link href="images/webclip.png" rel="apple-touch-icon" />
             </Head>
             <Header2></Header2>
             <div style={{ marginTop: '0px'}}>

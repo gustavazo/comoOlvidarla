@@ -220,9 +220,12 @@ export default (props) => {
           <h3 className="heading-10">Cursos para estudiar inglés cuando quieras y donde quieras.</h3>
           <p className="paragraph-7">Envianos un Email para mayor información:</p>
           <div className="form-block w-form">
-            <form id="email-form-2" name="email-form-2" data-name="Email Form 2" className="form">
+            
+            <form action="https://formsubmit.co/administracion@institutosaintpatrick.com" method="POST" className="form">
               <div className="columns-14 w-row">
-                <div className="column-25 w-col w-col-6 w-col-stack"><input type="text" className="txtfield2 w-input" maxLength={256} name="nombre" data-name="nombre" placeholder="Nombre" id="nombre-2" /><input type="email" className="txtfield2 w-input" maxLength={256} name="email-2" data-name="Email 2" placeholder="Email" id="email-2" required /></div>
+                <div className="column-25 w-col w-col-6 w-col-stack">
+                  <input type="text" className="txtfield2 w-input" maxLength={256} name="nombre" data-name="nombre" placeholder="Nombre" id="nombre-2" />
+                  <input type="email" className="txtfield2 w-input" maxLength={256} name="email-2" data-name="Email 2" placeholder="Email" id="email-2" required /></div>
                 <div className="column-26 w-col w-col-6 w-col-stack"><textarea placeholder="Mensaje" maxLength={5000} id="field-2" name="field-2" className="txtfield2 msje w-input" defaultValue={""} /></div>
               </div>
               <div className="div-block-54"><input type="submit" defaultValue="Enviar" data-wait="Please wait..." className="buttonsubmit w-button" />
@@ -230,12 +233,15 @@ export default (props) => {
                   <div className="text-block-24">O envianos un whatsapp!</div><img src="/images/whatsappIcon.png" alt="" className="image-20" /></a>
               </div>
             </form>
-            <div className="w-form-done">
+
+            {/*<div className="w-form-done">
               <div>Thank you! Your submission has been received!</div>
             </div>
             <div className="w-form-fail">
               <div>Oops! Something went wrong while submitting the form.</div>
-            </div>
+            </div>*/}
+
+
           </div><a href="#" className="button-7 w-button">Ir a cursos online</a></div>
       </div>
       <div id="quienesSomos" className="section-11">
