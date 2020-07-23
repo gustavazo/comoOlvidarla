@@ -1,5 +1,4 @@
 import ProductCard from '../components/ProductCard';
-import GoogleMapReact from 'google-map-react';
 
 const SectionCategoria = (props) => {
   

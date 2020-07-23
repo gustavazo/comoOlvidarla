@@ -1,5 +1,8 @@
 import PropTypes from 'prop-types'
 import NextHead from 'next/head'
+
+import Header from '../components/Header2';
+
 import { AmpIncludeAmpInstallServiceworker } from './amp/AmpCustomElement'
 
 // Your app's theme color
@@ -13,7 +16,7 @@ const THEME_COLOR = '#005af0'
 const Layout = (props) => (
   <>
     <NextHead>
-      <title>{props.title || ''}</title>
+      <title>{props.title || 'HOLA'}</title>
       <meta name="description" content={props.description || ''} />
       <meta name="theme-color" content={THEME_COLOR} />
       <link rel="icon" sizes="192x192" href="/images/icons-192.png" />
@@ -25,8 +28,10 @@ const Layout = (props) => (
       <link rel="icon" href="/favicon.ico" />
       <link rel="manifest" href="/manifest.json" />
     </NextHead>
-
+    <Header/>
     {props.children}
+
+
 
     <AmpIncludeAmpInstallServiceworker />
     <amp-install-serviceworker
