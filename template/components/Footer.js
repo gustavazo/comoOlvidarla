@@ -68,13 +68,13 @@ export default () => {
                             Envíenos su consulta y a la brevedad le reponderemos
         </div>
                         <div className="w-form">
-                            <form
+                            <form form action="https://formsubmit.co/administracion@institutosaintpatrick.com" method="POST"
                                 id="email-form"
                                 name="email-form"
                                 data-name="Email Form"
                                 className="w-clearfix"
                             >
-                                <input
+                                <input 
                                     type="text"
                                     className="txtfield w-input"
                                     maxLength={256}
@@ -132,32 +132,37 @@ export default () => {
                         <div>
                             <ul role="list" className="list">
                                 <li>
-                                    <a href="#home" className="linkfooter">
+                                    <a href="/#inicio" className="linkfooter">
                                         Home
               </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="linkfooter">
+                                    <a href="/#quienesSomos" className="linkfooter">
                                         Quiénes somos
               </a>
                                 </li>
                                 <li>
-                                    <a href="#cursos" className="linkfooter">
+                                    <a href="/#cursos" className="linkfooter">
                                         Cursos
               </a>
                                 </li>
                                 <li>
-                                    <a href="#servicios" className="linkfooter">
+                                    <a href="/#servicios" className="linkfooter">
                                         Servicios
               </a>
                                 </li>
                                 <li>
-                                    <a href="#novedades" className="linkfooter">
+                                    <a href="/#novedades" className="linkfooter">
                                         Novedades
               </a>
                                 </li>
                                 <li>
-                                    <a href="#contacto" className="linkfooter">
+                                    <a href="https://campusnube.com.ar/login" className="linkfooter" target="_blank">
+                                        Plataforma
+              </a>
+                                </li>
+                                <li>
+                                    <a href="/#contacto" className="linkfooter">
                                         Contacto
               </a>
                                 </li>

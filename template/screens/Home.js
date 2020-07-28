@@ -210,7 +210,7 @@ export default (props) => {
             <div className="column-24 w-col w-col-6 w-col-small-small-stack"><a href="#cursosOnline" className="link-block-2 w-inline-block"><img src="/images/onLine.png" alt="" className="image-18" /><div data-w-id="67b45396-caf4-d828-2343-6e12181d725e" style={{ WebkitTransform: 'translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)', MozTransform: 'translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)', msTransform: 'translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)', transform: 'translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)' }} className="text-block-23">Conocé más sobre<br />nuestros cursos<br />‍<strong><em>online!</em></strong></div></a></div>
           </div>
           <div className="social">
-            <div className="redessociales"><a href="#" className="linksocial w-inline-block"><img src="/images/face.png" alt="" className="imgredsoc" /></a><a href="#" className="linksocial w-inline-block"><img src="/images/insta.png" alt="" className="imgredsoc" /></a><a href="#" className="linksocial w-inline-block"><img src="/images/twitter.png" alt="" className="imgredsoc" /></a><a href="#" className="linksocial w-inline-block"><img src="/images/youtube.png" alt="" className="imgredsoc" /></a></div>
+            <div className="redessociales"><a href="https://www.facebook.com/institutosaintpatrick" target="_blanck" className="linksocial w-inline-block"><img src="/images/face.png" alt="" className="imgredsoc" /></a><a href="#" className="linksocial w-inline-block"><img src="/images/insta.png" alt="" className="imgredsoc" /></a><a href="#" className="linksocial w-inline-block"><img src="/images/twitter.png" alt="" className="imgredsoc" /></a><a href="#" className="linksocial w-inline-block"><img src="/images/youtube.png" alt="" className="imgredsoc" /></a></div>
           </div>
         </div>
       </div>
@@ -242,8 +242,9 @@ export default (props) => {
             </div>*/}
 
 
-          </div><a href="#" className="button-7 w-button">Ir a cursos online</a></div>
+          </div><a href="/cursos?categoriaId=14&categoriaStr=Cursos%20>%20Anuales%20>" className="button-7 w-button">Ir a cursos online</a></div>
       </div>
+      
       <div id="quienesSomos" className="section-11">
         <div className="tituloseccion">
           <h2 className="heading-8">Quienes somos</h2>
@@ -316,7 +317,7 @@ export default (props) => {
         </div>
       </div>
       <div id="mapa" className="section-5">
-        <div className="html-embed w-embed w-iframe"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1JyCXY3PMm4CUCuRSLtpCadM6GGAUsfbF" width="100%" height={400} /></div>
+        <div className="html-embed w-embed w-iframe"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1JyCXY3PMm4CUCuRSLtpCadM6GGAUsfbF" width="100%" height="400"></iframe></div>
       </div>
     </div>
   );

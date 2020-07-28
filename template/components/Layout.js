@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import Header2 from './Header2';
+import NewHeader from './NewHeader';
 
 import Footer from './Footer';
 
@@ -35,13 +35,13 @@ export default  ({ children }) => {
                 <link href="images/favicon.jpg" rel="shortcut icon" type="image/x-icon" />
                 <link href="images/webclip.png" rel="apple-touch-icon" />
             </Head>
-            <Header2></Header2>
+            <NewHeader></NewHeader>
             <div style={{ marginTop: '0px'}}>
                 {children}
             </div>
 
 
-            {/* <Footer></Footer> */}
+            <Footer></Footer> 
             <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5da0657b754316944047c5a6" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
             <script src="/js/fix.js"></script>
             <script src="/js/webflow.js"></script>

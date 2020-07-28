@@ -11,8 +11,6 @@ import Home from '../screens/Home';
 import { getAllCategorias } from '../lib/categorias';
 import { getAllNovedades } from '../lib/novedades';
 
-export const config = { amp: true }
-
 const HomePage = (props) => (
   <>
     <Layout
@@ -33,4 +31,4 @@ export async function getServerSideProps(arg) {
   } 
 }
 
-export default HomePage;
+export default Home;

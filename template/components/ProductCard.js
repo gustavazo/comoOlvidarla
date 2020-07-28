@@ -4,6 +4,7 @@ export default (props) => {
 
 
     const categoriaHilo = `${props.cat1} > ${props.cat2} >`
+    console.log("====>",`/cursos?categoriaId=${props.categoria.id}&categoriaStr=${categoriaHilo}`);
 
     return (
         <Link href={`/cursos?categoriaId=${props.categoria.id}&categoriaStr=${categoriaHilo}`} target="_blank">

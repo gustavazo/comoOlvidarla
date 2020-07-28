@@ -1,18 +1,18 @@
 import Link from 'next/link';
 
 import { ToastContainer, toast } from 'react-toastify';
+import { useRef } from 'react';
 
 export default () => {
     const [carro, setCarro] = React.useState([]);
-    
 
-    
+    const shouldOpen = useRef(false);
+    const menuRef = useRef();
 
     React.useEffect(() => {
         setCarro(JSON.parse(localStorage.getItem('carro')));
 
         const handleCarroModificado = (event) => {
-            console.log('EVENTO!');
             setCarro(JSON.parse(localStorage.getItem('carro')));
 
             toast(event.detail.mensaje);
@@ -27,54 +27,82 @@ export default () => {
 
     }, []);
 
-    
+    const handleMenuOpen = () => {
+        shouldOpen.current = !shouldOpen.current;
+
+        if (shouldOpen.current) {
+            menuRef.current.style.maxHeight = '300px'
+        } else {
+            menuRef.current.style.maxHeight = '0px'
+        }
+
+    }
 
     return (
-        <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light, navBar" >
-            
-            {/*<a className="navbar-brand" href="#">Navbar</a>*/}
-            
-            <div className="div-block-55">
-                <a href="/#inicio" className="brand w-nav-brand">
-                    <img src="images/logo.png" alt="logo Saint Patrick" className="image-3" />
-                    <div className="div-block-46">
-                        <h2 className="heading-3">INSTITUTO DE INGLÉS</h2><h1 className="heading-4">SAINT PATRICK</h1>
+        <div className="wrappernavbar">
+            <div className="navbar2"><a href="#" className="brand w-nav-brand"><img src="images/logo.png" alt="" className="image-3" /><div className="div-block-46"><h2 className="heading-3">INSTITUTO DE INGLÉS</h2><h1 className="heading-4">SAINT PATRICK</h1></div></a>
+                <div className="navegacion">
+                    <a href="/#inicio" className="linkmenu w-inline-block"  aria-current="page">
+                        <div className="text-block-28">Home</div>
+                        
+                    </a>
+                    <a href="/#quienesSomos" className="linkmenu w-inline-block">
+                        <div className="text-block-28">Quiénes somos</div>
+                    </a>
+                    <a href="/#cursos" className="linkmenu w-inline-block">
+                        <div className="text-block-28">Cursos</div>
+                    </a>
+                    <a href="/#servicios" className="linkmenu w-inline-block">
+                        <div className="text-block-28">Servicios</div>
+                    </a>
+                    <a href="/#novedades" className="linkmenu w-inline-block">
+                        <div className="text-block-28">Novedades</div>
+                    </a>
+                    <a href="https://campusnube.com.ar/login" className="linkmenu w-inline-block" target="_blank">
+                        <div className="text-block-28">Plataforma</div>
+                    </a>
+                    <a href="/#contacto" className="linkmenu w-inline-block">
+                        <div className="text-block-28">Contacto</div>
+                    </a>
+                </div>
+                <div data-w-id="de82861c-4a08-2283-3bf3-5f034eb3438f" className="div-block-60" onClick={handleMenuOpen}>
+                    <img src="images/menuIcon.png" alt="" className="image-24" /></div>
+                <div className="contuser">
+                    <div className="user">
+                    <Link href="/carro-de-compras">
+                            <div title="Ira al carro de compras" className="containercarro"><img src="images/carro.png" alt="" className="image-21" />
+                                <div className="text-block-25">{carro.length}</div>
+                            </div>
+                    </Link>        
                     </div>
-                </a>
+                </div>
             </div>
-            
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon" />
-            </button>
-            <div className="collapse navbar-collapse menuResponsive" id="navbarSupportedContent">
-                <ul className="navbar-nav mr-auto" style={{ justifyContent: 'flex-end', width: '100%'}}>
-                    <li className="nav-item active">
-                        <a className="navlink w-nav-link nav-link" style={{color: '#9b2019'}} href="/#inicio">Home <span className="sr-only">(current)</span></a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link navlink w-nav-link" style={{color: '#9b2019'}} href="/#quienesSomos">Quienes somos</a>
-                    </li>
-                    
-                    <li className="nav-item">
-                        <a className="nav-link navlink w-nav-link" style={{color: '#9b2019'}} href="/#cursos">Cursos</a>
-                    </li>
-                    <div className="contuser">
-                        <div className="user">
-                            <Link href="/carro-de-compras">
-                                <div title="Ira al carro de compras" className="containercarro"><img src="images/carro.png" alt="icono carro de compras" className="image-21" />
-                                    <div className="text-block-25">{carro.length}</div>
-                                </div>
-                            </Link>
-                        </div>
-
-                    </div>
-                </ul>
-               
-                
-
+            <div className="div-block-61">
+                <div ref={menuRef} style={{transition: 'max-height 0.6s'}} className="navegacionmobile">
+                    <a href="/#inicio" className="linkmenu w-inline-block">
+                        <div className="text-block-28" >Home</div>
+                    </a>
+                    <a href="/#quienesSomos" className="linkmenu w-inline-block">
+                        <div className="text-block-28" onClick={handleMenuOpen}>Quiénes somos</div>
+                    </a>
+                    <a href="/#cursos" className="linkmenu w-inline-block">
+                        <div className="text-block-28" onClick={handleMenuOpen}>Cursos</div>
+                    </a>
+                    <a href="/#servicios" className="linkmenu w-inline-block">
+                        <div className="text-block-28" onClick={handleMenuOpen}>Servicios</div>
+                    </a>
+                    <a href="/#novedades" className="linkmenu w-inline-block">
+                        <div className="text-block-28" onClick={handleMenuOpen}>Novedades</div>
+                    </a>
+                    <a href="https://campusnube.com.ar/login" className="linkmenu w-inline-block" target="_blank">
+                        <div className="text-block-28" onClick={handleMenuOpen}>Plataforma</div>
+                    </a>
+                    <a href="/#contacto" className="linkmenu w-inline-block">
+                        <div className="text-block-28" onClick={handleMenuOpen}>Contacto</div>
+                    </a>
+                </div>
             </div>
-            
-        </nav>
+        </div>
 
         
 
