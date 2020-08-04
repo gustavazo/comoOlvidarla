@@ -98,7 +98,7 @@ export default () => {
           return _item;
         });
   
-        const res = await axios.post(`http://localhost:3005/api/preferences?external_reference=${uniId}`, {items: JSON.stringify(items)});
+        const res = await axios.post(`http://66.97.46.44:3005/api/preferences?external_reference=${uniId}`, {items: JSON.stringify(items)});
         const url = res.data.body.init_point;
   
         let productos = '';
@@ -120,7 +120,7 @@ export default () => {
         //   `
         // }
   
-        // const email = await axios.post(`http://localhost:3005/api/PorFavors/sendEmail`, {
+        // const email = await axios.post(`http://66.97.46.44:3005/api/PorFavors/sendEmail`, {
         //   msg: emailParams
         // })
   
@@ -136,7 +136,7 @@ export default () => {
         // lo parseamos (se transfrorma en un tipo de dato real) y setemos la variable global carro
         setCarro(JSON.parse(carroString));
 
-        socket = SocketIOClient('http://localhost:3005', {secure: false})
+        socket = SocketIOClient('http://66.97.46.44:3005', {secure: false})
 
         socket.on('connect', () => {
             console.log('connected');
