@@ -14,13 +14,13 @@ const fallbackApp = require('express')();
 const app = module.exports = loopback();
 
 
-fallbackApp.use('/', (req, res) => {
-  res.redirect('https://cursosbestprice.com');
-});
+// fallbackApp.use('/', (req, res) => {
+//   res.redirect('https://cursosbestprice.com');
+// });
 
-fallbackApp.use('/admin', (req, res) => {
-  res.redirect('http://cursosbestprice.com:3001');
-});
+// fallbackApp.use('/admin', (req, res) => {
+//   res.redirect('http://cursosbestprice.com:3001');
+// });
 
 fallbackApp.listen(3010, () => console.log('fallback server'));
 
