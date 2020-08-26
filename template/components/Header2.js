@@ -29,7 +29,7 @@ export default () => {
 
 <div data-collapse="medium" data-animation="default" data-duration={400} role="banner" className="navbar w-nav">
   <div className="div-block-55"><a href="#home" className="brand w-nav-brand"><img src="images/logo.png" alt="" className="image-3" /><div className="div-block-46"><h2 className="heading-3">INSTITUTO DE INGLÉS</h2><h1 className="heading-4">SAINT PATRICK</h1></div></a>
-    <nav role="navigation" className="nav-menu w-nav-menu"><a href="#inicio" className="navlink w-nav-link">Home</a><a href="#quienesSomos" className="navlink w-nav-link">Quiénes somos</a><a href="#cursos" className="navlink w-nav-link">Cursos</a><a href="#servicios" className="navlink w-nav-link">Servicios</a><a href="#novedades" className="navlink w-nav-link">Novedades</a><a href="#" className="navlink w-nav-link">Plataforma</a><a href="#contacto" className="navlink w-nav-link">Contacto</a></nav>
+    <nav role="navigation" className="nav-menu w-nav-menu"><a href="#inicio" className="navlink w-nav-link">asdasdadad</a><a href="#quienesSomos" className="navlink w-nav-link">Quiénes somos</a><a href="#cursos" className="navlink w-nav-link">Cursos</a><a href="#servicios" className="navlink w-nav-link">Servicios</a><a href="#novedades" className="navlink w-nav-link">Novedades</a><a href="#" className="navlink w-nav-link">Plataforma</a><a href="#contacto" className="navlink w-nav-link">Contacto</a></nav>
   </div>
   <div className="menu-button w-nav-button">
     <div className="icon w-icon-nav-menu" />

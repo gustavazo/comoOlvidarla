@@ -15,6 +15,8 @@ export default () => {
         const handleCarroModificado = (event) => {
             setCarro(JSON.parse(localStorage.getItem('carro')));
 
+            console.log("=======)", carro);
+
             toast(event.detail.mensaje);
 
         }
@@ -38,6 +40,21 @@ export default () => {
 
     }
 
+    const dropdown = {
+        position: 'relative',
+        display: 'inline-block',
+    };
+      
+    const dropbtn = {
+        backgroundColor: '#4CAF50',
+        color: 'white',
+        padding: '16px',
+        fontSize: '16px',
+        fontFamily: "Monserrat",
+        border: 'none',
+    };
+  
+
     return (
         <div className="wrappernavbar">
             <div className="navbar2"><a href="#" className="brand w-nav-brand"><img src="images/logo.png" alt="" className="image-3" /><div className="div-block-46"><h2 className="heading-3">INSTITUTO DE INGLÉS</h2><h1 className="heading-4">SAINT PATRICK</h1></div></a>
@@ -52,9 +69,23 @@ export default () => {
                     <a href="/#cursos" className="linkmenu w-inline-block">
                         <div className="text-block-28">Cursos</div>
                     </a>
-                    <a href="/#servicios" className="linkmenu w-inline-block">
+                    
+                    {/*<a href="/#servicios" className="linkmenu w-inline-block">
                         <div className="text-block-28">Servicios</div>
-                    </a>
+                    </a>*/}
+
+
+                    <div className="dropdown">
+                        <button className="dropbtn">Servicios</button>
+                        <div className="dropdown-content">
+                            <a href="/#Libros">Libros</a>
+                            <a href="/#Viajes educativos">Viajes educativos</a>
+                            <a href="/#Tramitación de visas">Tramitación de visas</a>
+                            <a href="#">Nuestras certificaciones</a>
+                        </div>
+                    </div>    
+
+
                     <a href="/#novedades" className="linkmenu w-inline-block">
                         <div className="text-block-28">Novedades</div>
                     </a>
@@ -71,7 +102,7 @@ export default () => {
                     <div className="user">
                     <Link href="/carro-de-compras">
                             <div title="Ira al carro de compras" className="containercarro"><img src="images/carro.png" alt="" className="image-21" />
-                                <div className="text-block-25">{carro.length}</div>
+                                <div className="text-block-25">{carro.length}</div> 
                             </div>
                     </Link>        
                     </div>

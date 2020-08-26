@@ -26,7 +26,7 @@ const customStyles = {
 
 const Producto = props => {
     
-    
+    console.log("¬¬¬¬¬¬¬¬¬¬¬¬¬", props.info);
     const precio = new Intl.NumberFormat("de-DE", {style: "currency", currency: "ARS"}).format(parseFloat(props.info.precio).toFixed(2)); 
     
     
@@ -34,7 +34,7 @@ const Producto = props => {
 
     return (
         <div className="compra">
-                    <div className="text-block-18 descripcion">{props.info.nombre}</div>
+        <div className="text-block-18 descripcion">{props.info.nombre} {props.info.id}</div>
                     <div className="div-block-45">
                         <div className="text-block-19">{precio}</div>
                     </div>
@@ -169,7 +169,9 @@ export default () => {
                   id="myId"
                   className="myClassname"
                   display="initial"
-                  position="relative"/>
+                  position="relative" />
+          
+
           </Modal>
           
             <div className="div-block-40">

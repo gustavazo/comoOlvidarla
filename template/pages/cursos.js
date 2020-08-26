@@ -6,8 +6,5 @@ export default () => {
       <Layout>
           <Cursos />
       </Layout>  
-        
     )
-        
-      
 }

@@ -11,7 +11,7 @@ const SectionCategoria = (props) => {
 
       {props.categoria.categorias.map(categoria2 => (
         <div>
-          <div className="text-block-8">{categoria2.nombre}</div>
+          <div id={categoria2.nombre} className="text-block-8">{categoria2.nombre}</div>
           <div className="paragraph-3 centrado" dangerouslySetInnerHTML={{__html: categoria2.descripcion}} /> 
           <div className="wrapitems">
 
@@ -47,11 +47,12 @@ const Novedad = (props) => {
 
 
 export default (props) => {
-  
+  console.log('LA CONCHANDE TU MADRE')
 
   React.useEffect(() => {
     const categoriasString = JSON.stringify(props.categorias);
-    
+    console.log('LA CONCHANDE TU MADRE')
+
     localStorage.setItem('categorias', categoriasString);
     
     if (!localStorage.getItem('carro')) {
@@ -67,76 +68,6 @@ export default (props) => {
 
   return (
     <div>
-      <div id="home" className="section">
-        <div className="div-block-6">
-          <div className="columns w-row">
-            <div className="w-col w-col-8 w-col-small-6 w-col-tiny-tiny-stack">
-              <div className="div-block-9">
-                <h1 className="heading">La forma más rápida<br />de aprender inglés</h1>
-                <div data-delay={4000} data-animation="outin" data-autoplay={1} data-easing="ease-in-out" data-duration={650} data-infinite={1} className="slider w-slider">
-                  <div className="w-slider-mask">
-                    <div className="w-slide">
-                      <div className="div-block-7">
-                        <div>
-                          <h2 className="h2slider">Cursos regulares para niños,<br />adolescentes y adultos.</h2>
-                          <p className="paragraph">Saint Patrick ofrece cursos especialmente diseñados para niños,<br />adolescentes y adultos en una amplia variedad de horarios y niveles.</p><a href="#cursos" className="boton1 w-button">Más información</a></div>
-                      </div>
-                    </div>
-                    <div className="w-slide">
-                      <div className="div-block-7">
-                        <div>
-                          <h2 className="h2slider">Inglés online</h2>
-                          <p className="paragraph">Con nuestras aulas virtuales brindamos cursos online</p><a href="#" className="boton1 w-button">Más información</a></div>
-                      </div>
-                    </div>
-                    <div className="w-slide">
-                      <div className="div-block-7">
-                        <div>
-                          <h2 className="h2slider">Exámenes<br />internacionales</h2>
-                          <p className="paragraph">Certificados Universidad de Cambridge</p><a href="#" className="boton1 w-button">Más información</a></div>
-                      </div>
-                    </div>
-                    <div className="w-slide">
-                      <div className="div-block-7">
-                        <div>
-                          <h2 className="h2slider">División viajes educativos<br />Travel &amp; learn</h2>
-                          <p className="paragraph">Grupales a REINO UNIDO y USA<br />Arma tu propio Curso<br />Tramitación de VISAS</p><a href="#" className="boton1 w-button">Más información</a></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="left-arrow w-slider-arrow-left">
-                    <div className="w-icon-slider-left" />
-                  </div>
-                  <div className="right-arrow w-slider-arrow-right">
-                    <div className="w-icon-slider-right" />
-                  </div>
-                  <div className="slide-nav w-slider-nav" />
-                </div>
-              </div>
-            </div>
-            <div className="column w-col w-col-4 w-col-small-6 w-col-tiny-tiny-stack">
-              <div className="text-block-3">Sucursales</div>
-              <div>
-                <div className="datos"><img src="/images/localitation.png" alt="" className="image-5" /><a href="#mapa" title="Ver mapa" className="link-2">Villa Gdor. Gálvez: Pje. Ghirardi 969 </a>
-                  <div className="telefono"><a href="#" className="link-2">0341-4928448</a></div>
-                </div>
-                <div className="datos"><img src="/images/localitation.png" alt="" className="image-5" /><a href="#" className="link-2">Funes: Av. Fuerza Aérea 1918 </a>
-                  <div className="telefono"><a href="#" className="link-2">0341-2310848</a></div>
-                </div>
-                <div className="datos"><img src="/images/localitation.png" alt="" className="image-5" /><a href="#" className="link-2">Funes: Colegio Joan Miro de Funes - Catamarca 1857 </a>
-                  <div className="telefono"><a href="#" className="link-2">0341 493-6094</a></div>
-                </div>
-                <div className="datos"><img src="/images/localitation.png" alt="" className="image-5" /><a href="#" className="link-2">Alvear - Av. América y San Martín - Av. San Martin y Anchorena</a>
-                  <div className="telefono"><a href="#" className="link-2">0341-4921143</a></div>
-                </div>
-              </div>
-              <div className="telefono mail"><img src="/images/mail.png" alt="" className="image-6" /><a href="#" className="link-2">admin@saintpatrick.com.ar</a></div>
-              <div className="redessociales"><a href="#" className="linksocial w-inline-block"><img src="/images/face.png" alt="" className="imgredsoc" /></a><a href="#" className="linksocial w-inline-block"><img src="/images/insta.png" alt="" className="imgredsoc" /></a><a href="#" className="linksocial w-inline-block"><img src="/images/twitter.png" alt="" className="imgredsoc" /></a><a href="#" className="linksocial w-inline-block"><img src="/images/youtube.png" alt="" className="imgredsoc" /></a></div>
-            </div>
-          </div>
-        </div>
-        <div className="div-block-14"><img src="/images/abajo2.png" alt="" className="image-7" /></div>
-      </div>
       <div id="inicio" className="home">
         <div className="div-block-48">
           <div className="columns-11 w-row">
@@ -209,9 +140,16 @@ export default (props) => {
             </div>
             <div className="column-24 w-col w-col-6 w-col-small-small-stack"><a href="#cursosOnline" className="link-block-2 w-inline-block"><img src="/images/onLine.png" alt="" className="image-18" /><div data-w-id="67b45396-caf4-d828-2343-6e12181d725e" style={{ WebkitTransform: 'translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)', MozTransform: 'translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)', msTransform: 'translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)', transform: 'translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)' }} className="text-block-23">Conocé más sobre<br />nuestros cursos<br />‍<strong><em>online!</em></strong></div></a></div>
           </div>
+          
           <div className="social">
-            <div className="redessociales"><a href="https://www.facebook.com/institutosaintpatrick" target="_blanck" className="linksocial w-inline-block"><img src="/images/face.png" alt="" className="imgredsoc" /></a><a href="#" className="linksocial w-inline-block"><img src="/images/insta.png" alt="" className="imgredsoc" /></a><a href="#" className="linksocial w-inline-block"><img src="/images/twitter.png" alt="" className="imgredsoc" /></a><a href="#" className="linksocial w-inline-block"><img src="/images/youtube.png" alt="" className="imgredsoc" /></a></div>
+            <div className="redessociales">
+              <a title="Facebook" href="https://www.facebook.com/institutosaintpatrick" target="_blanck" className="linksocial w-inline-block"><img src="/images/face.png" alt="" className="imgredsoc" /></a>
+              <a title="Instagram" href="https://www.instagram.com/inst.saintpatrick/" target="_blanck" className="linksocial w-inline-block"><img src="/images/insta.png" alt="" className="imgredsoc" /></a>
+              <a title="Blog" href="#" className="linksocial w-inline-block"><img src="/images/blog.png" alt="" className="imgredsoc" /></a>
+              <a href="#" className="linksocial w-inline-block"><img src="/images/youtube.png" alt="" className="imgredsoc" /></a>
+            </div>
           </div>
+
         </div>
       </div>
       <div id="cursosOnline" className="cursosonline">
@@ -242,7 +180,7 @@ export default (props) => {
             </div>*/}
 
 
-          </div><a href="/cursos?categoriaId=14&categoriaStr=Cursos%20>%20Anuales%20>" className="button-7 w-button">Ir a cursos online</a></div>
+          </div><a href="/cursos?categoriaId=29&categoriaStr=Cursos%20>%20Anuales%20>" className="button-7 w-button">Ir a cursos online</a></div>
       </div>
       
       <div id="quienesSomos" className="section-11">

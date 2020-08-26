@@ -3,6 +3,9 @@ import { useRouter } from 'next/router'
 import axios from 'axios';
 import { API_URL } from '../config';
 
+
+
+
 let carro;
 
 const Producto = props => {
@@ -61,26 +64,37 @@ const Producto = props => {
             {/*<div dangerouslySetInnerHTML={{ __html: this.state.description }} />*/}
             
             <p className="paragraph-6" dangerouslySetInnerHTML={{ __html: props.info.descripcion}} />
-            <div className="text-block-19">{new Intl.NumberFormat("de-DE", {style: "currency", currency: "ARS"}).format(precio)}</div>
-
-
+            
+            
+            { precio > 0 ? (
+                <div className="text-block-19">{new Intl.NumberFormat("de-DE", {style: "currency", currency: "ARS"}).format(precio)}</div>
+            ) : null    
+}
 
             <div className="div-block-42">
-                <div className="div-block-41">
-                    {!productoAniadido?
-                        <>
-                            <img src="images/carro.png" alt="carro de compras" className="image-15" />
-                            <button className="button-5 w-button" onClick={() => handleCompra(props.info)}> Añadir al<br />carro de compras</button>
-                        </>
-                        :
-                        <>
-                            <img src="images/carro.png" alt="carro de compras" className="image-15" />
-                            <button className="button-5b w-button" onClick={() => handleAnular(props.info)}> Eliminar del<br />carro de compras</button>
-                        </>
-                    }
-                </div>
                 
-                <div className="div-block-41 azul"><img src="images/carro.png" alt="" className="image-15" /><a href="/carro-de-compras" target="_blank" className="button-5 w-button">Ir al carro<br />de compras</a></div>
+                {
+                    precio > 0 ? (
+                        <>    
+                            <div className="div-block-41">
+                                {!productoAniadido ?
+                                    <>
+                                        <img src="images/carro.png" alt="carro de compras" className="image-15" />
+                                        <button className="button-5 w-button" onClick={() => handleCompra(props.info)}> Añadir al<br />carro de compras</button>
+                                    </>
+                                    :
+                                    <>
+                                        <img src="images/carro.png" alt="carro de compras" className="image-15" />
+                                        <button className="button-5b w-button" onClick={() => handleAnular(props.info)}> Eliminar del<br />carro de compras</button>
+                                    </>
+                                }
+
+                            </div>
+                            <div className="div-block-41 azul"><img src="images/carro.png" alt="" className="image-15" /><a href="/carro-de-compras" target="_blank" className="button-5 w-button">Ir al carro<br />de compras</a></div>
+                        </>
+                    ) : null
+                    
+                }
             </div> 
         </div>  
     )
@@ -107,6 +121,9 @@ const UltimaCategoria = (props) => {
 }
  
 export default (props) => {
+
+    const rutaCompartir = `http://localhost:3000/cursos?categoriaId=36&categoriaStr=Servicios%20%3E%20Libros%20%3E`    /*`http://alonso-inmobiliaria.com${router.asPath}`;*/
+
     const [categorias, setCategorias] = React.useState([]);
     const [categoriaSeleccionada, setCategoriaSeleccionada] = React.useState({
         categorias: []
@@ -150,7 +167,7 @@ export default (props) => {
         <div className="section-10 w-clearfix">
             <div className="div-block-40">
                 <h1 className="h1rubro"></h1>
-                <h2 className="h2subrubro">{categoriasPadres} Regulares</h2>
+                <h2 className="h2subrubro">{categoriasPadres} {categoriaSeleccionada.nombre}</h2>
             </div>
 
             <StickyMenu categorias={categorias} />

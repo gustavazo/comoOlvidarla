@@ -18,7 +18,7 @@ export default () => {
                                 </a>
                                 <div className="telefono">
                                     <a href="#" className="link-2">
-                                        0341 489563
+                                        0341 4928448
               </a>
                                 </div>
                             </div>

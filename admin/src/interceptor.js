@@ -2,6 +2,11 @@ import cfg from './conf';
 
 const interceptor = requestHandler => (type, resource, params) => {
     console.log(type, resource)
+
+    if (type === 'GET_LIST') {
+      console.log(params);
+      params.pagination.perPage = 50;
+    }
    
     if (resource === 'novedades' || resource === 'categorias') {
   
