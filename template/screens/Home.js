@@ -12,12 +12,13 @@ const SectionCategoria = (props) => {
       {props.categoria.categorias.map(categoria2 => {
         console.log('antes', categoria2.nombre)
         const idSinEspacios = categoria2.nombre.replace(/\s/g,'')
+        const idSinAcentosNiEspacio = idSinEspacios.replace(/\ó/, 'o')
 
         console.log('ID', idSinEspacios);
       
         return (
             <div>
-              <div id={idSinEspacios} className="text-block-8">{categoria2.nombre}</div>
+              <div id={idSinAcentosNiEspacio} className="text-block-8">{categoria2.nombre}</div>
               <div className="paragraph-3 centrado" dangerouslySetInnerHTML={{__html: categoria2.descripcion}} /> 
               <div className="wrapitems">
 

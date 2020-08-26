@@ -65,7 +65,7 @@ export default () => {
                         <div className="dropdown-content">
                             <a href="/#Libros">Libros</a>
                             <a href="/#Viajeseducativos">Viajes educativos</a>
-                            <a href="/#Tramitacióndevisas">Tramitación de visas</a>
+                            <a href="/#Tramitaciondevisas">Tramitación de visas</a>
                             <a href="#">Nuestras certificaciones</a>
                         </div>
                     </div>    
