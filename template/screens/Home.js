@@ -9,19 +9,27 @@ const SectionCategoria = (props) => {
         <h2 className="heading-8">{props.categoria.nombre}</h2>
       </div>
 
-      {props.categoria.categorias.map(categoria2 => (
-        <div>
-          <div id={categoria2.nombre} className="text-block-8">{categoria2.nombre}</div>
-          <div className="paragraph-3 centrado" dangerouslySetInnerHTML={{__html: categoria2.descripcion}} /> 
-          <div className="wrapitems">
+      {props.categoria.categorias.map(categoria2 => {
+        console.log('antes', categoria2.nombre)
+        const idSinEspacios = categoria2.nombre.replace(/\s/g,'')
 
-            {categoria2.categorias.map(categoria3 => (
-              <ProductCard categoria={categoria3} cat2={categoria2.nombre} cat1={props.categoria.nombre}/>
-            ))}
+        console.log('ID', idSinEspacios);
+      
+        return (
+            <div>
+              <div id={idSinEspacios} className="text-block-8">{categoria2.nombre}</div>
+              <div className="paragraph-3 centrado" dangerouslySetInnerHTML={{__html: categoria2.descripcion}} /> 
+              <div className="wrapitems">
 
-          </div>
-        </div>
-      ))}
+                {categoria2.categorias.map(categoria3 => (
+                  <ProductCard categoria={categoria3} cat2={categoria2.nombre} cat1={props.categoria.nombre}/>
+                ))}
+
+              </div>
+            </div>
+          )
+        }
+      )}
     </div>
   )
 };
@@ -43,7 +51,6 @@ const Novedad = (props) => {
     </div>
   )
 }
-
 
 
 export default (props) => {

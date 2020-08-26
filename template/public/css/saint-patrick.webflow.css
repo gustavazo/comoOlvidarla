@@ -2,7 +2,6 @@
   background-color: white;
   color: #9b2019;
   padding: 16px;
-  font-family: 'Montserrat';
   font-size: 14px;
   border: none;
 }
@@ -22,7 +21,6 @@
 }
 
 .dropdown-content a {
-  font-family: 'Montserrat';
   color: #9b2019;
   padding: 8px 10px;
   text-decoration: none;

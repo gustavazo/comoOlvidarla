@@ -40,21 +40,6 @@ export default () => {
 
     }
 
-    const dropdown = {
-        position: 'relative',
-        display: 'inline-block',
-    };
-      
-    const dropbtn = {
-        backgroundColor: '#4CAF50',
-        color: 'white',
-        padding: '16px',
-        fontSize: '16px',
-        fontFamily: "Monserrat",
-        border: 'none',
-    };
-  
-
     return (
         <div className="wrappernavbar">
             <div className="navbar2"><a href="#" className="brand w-nav-brand"><img src="images/logo.png" alt="" className="image-3" /><div className="div-block-46"><h2 className="heading-3">INSTITUTO DE INGLÉS</h2><h1 className="heading-4">SAINT PATRICK</h1></div></a>
@@ -79,8 +64,8 @@ export default () => {
                         <button className="dropbtn">Servicios</button>
                         <div className="dropdown-content">
                             <a href="/#Libros">Libros</a>
-                            <a href="/#Viajes educativos">Viajes educativos</a>
-                            <a href="/#Tramitación de visas">Tramitación de visas</a>
+                            <a href="/#Viajeseducativos">Viajes educativos</a>
+                            <a href="/#Tramitacióndevisas">Tramitación de visas</a>
                             <a href="#">Nuestras certificaciones</a>
                         </div>
                     </div>    
